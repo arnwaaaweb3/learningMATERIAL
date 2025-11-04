@@ -1,0 +1,72 @@
+
+==================================================================================================
+# Basic Questions
+
+Q: What is a blockchain?
+     A: Think of a blockchain as a digital record book that is copied and shared across many computers around the world. 
+          Because every participant has a copy, no single person or authority can change the records, making it extremely secure and trustworthy.
+
+Q: What is a ledger?
+     A: A ledger is simply the name for that digital record book. 
+          It contains a complete history of all the transactions that have ever happened on the network.
+
+Q: How does a blockchain work?
+     A: It works by bundling new data (like transactions) into a "block." 
+          This block is cryptographically sealed and then validated by the network's participants. 
+          Once validated, this new block is permanently attached to the end of the previous block, creating a continuous, unbroken "chain" of records.
+
+Q: How secure is a blockchain?
+      A: It’s highly secure because of two things: 
+          1. Cryptography
+          2. Distribution. 
+               Every new block is linked to the old one using a unique cryptographic hash. 
+               If someone tries to change data in an old block, its signature changes, which instantly breaks the link to every block that followed. 
+               Since everyone in the network has a copy, the fake block is immediately noticed and rejected.
+
+Q: How does the record-sharing (distribution) process work?
+     A: When you send a transaction, it is first sent out (broadcasted) to the network and waits in a temporary holding area called the mempool.
+          Special network participants (validators or miners) collect these waiting transactions and put them into a new block. 
+          To agree on which block is the correct one, the network uses a Consensus Mechanism (a set of rules). 
+          Once the new block is accepted by the consensus rules, it is shared with all other computers, and they all add a copy to their own ledger, keeping everything synchronized.
+
+Q: What is Solidity?
+     A: Solidity is the programming language used to write Smart Contracts. 
+          It defines the rules and logic for how an agreement works, and then executes the code automatically when the terms are met, all without needing a third-party lawyer or banker.
+
+Q: Is Solidity only for Ethereum?
+     A: No, but it is EVM-native, meaning it was specifically built for the Ethereum Virtual Machine (EVM). 
+          You can use Solidity on Ethereum, but also on any other blockchain that is compatible with the EVM (like Polygon or Avalanche C-Chain).
+
+Q: What is EVM?
+     A: Etherum Virtual Machine (EVM) is virtual machine that runs smart contracts within Ethereum protocol
+
+Q: How does EVM work?
+     A: EVM does these three essential things:
+          1. It runs the bytecode of the smart contract, compiled from Solidity.
+               Think of it as the "brain" or CPU of the smart contract.
+          2. It manages the storage of the contract.
+               All variables and data (mapping, uint, string, etc) are stored in storage, memory, or stack.
+               and EVM is the one who manages the layout.
+          3. It manages the cost of the gas fees.
+               Every order and execution of the smart contract is charged a certain amount of gas.
+               For example:
+                   add --> cheap gas fees
+                   sstore (write to storage) --> expensive gas fees
+                   kkecak256 --> kinda expensive
+                   etc.
+
+Q: In Solidity, what is the difference between a storage and a memory?
+     A: Storage is permanent while memory is temporary.
+          Imagine storage as a hard-disk in a computer.
+          Storage is having an expensive gas fees.
+          This is the one that goes into the blockchain after the transaction is completed.
+               For example:
+               string public name; // STORAGE
+
+==================================================================================================
+# Basic Notes
+
+- Solidity often called as Turing Complete:
+          It means that it  can solve any computation problem, and any calculation.
+
+- A contract is a collection of functions and data ()
