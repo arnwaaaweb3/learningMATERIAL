@@ -54,5 +54,27 @@ For simple example, we all know that binary code is exist between 0 and 1, Y/N.
             - balance of an account (balance)
             - amount of tokens in an account (amount)
             - total supply of a token (totalSupply)
+                Why?
+               Security:  The balance of an account or the amount of tokens must stay non-negative (>= 0)
+               Standard: Majority of token standards like ERC-20 defines the balance, amount, and totalSupply as uint256
+    
+    2. Timestamp
+        uint is also used in timestamp.
+        timestamp in blockchain is a representation of the time in seconds since the epoch.
+            In computer world, we have what we called as "Unix Epoch".
+            Unix Epoch is the time in seconds since January 1, 1970, 00:00:00 UTC
+                Why 1970?
+                Because it's the year that the Unix was created.
+                And that time, engineers and computer scientists needed to create a standard time.
+            Now, why blockchain also use this same timestamp?
+            Because blockchain were made by modern computers, and modern computers are using Unix Epoch as their standard time.
+            What happened if blockchain didn't have its own standard time?
+            - No timestamp of historical transactions 
+            - No timestamp of the arrangement process within the blockchain itself.
+            - No deadline of the transaction 
+            - No timestamp of token expiration, lock, vesting, cooldown, staking duration
+            - Nodes may not be synchronized and inconsistent
+            
+
             
 
