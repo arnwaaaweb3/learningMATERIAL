@@ -31,4 +31,29 @@ So, what does EVM do?
 How does EVM work? (Step-by-step)
     Imagine you're calling the "transfer()" in ERC-20 smart contract.
         1. You're sending some amount of tokens to someone (transfer).
-             Here
+             Here, you're calling the "transfer()" function in ERC-20 smart contract.
+             The Wallet is building the transaction and sending it to the node.
+                The transaction could be including the following information:
+                    - from: the address of the sender
+                    - to: the address of the receiver
+                    - value: the amount of tokens to be sent
+                    - data: the data to be executed in the smart contract
+                            data is like the set of instructions / bytecode that explain what function to be executed.
+                            We use 'data' to explain what function we want to execute to EVM as a bytecode.
+                                For example:
+                                data = 0xa9059cbb000000000000000000000000BEEF...00000000000000000000000000000000056BC75E2D63100000
+                                                this means that we want to execute 'transfer(address,uint256)' function 
+                    - gas: the gas fees to be paid
+                    - gasPrice: the price of gas fees
+                    - gasLimit: the maximum amount of gas to be used
+                    - nonce: the number of transactions sent by the sender
+                        Example:
+                        {
+                            nonce: 12,
+                            gasLimit: 21000,
+                            maxFeePerGas: 40 gwei,
+                            to: "0xABC...",
+                            value: 1 ETH,
+                            data: 0x... (abi encoded)
+                        }
+             EVM reads
