@@ -2,3 +2,4 @@
 // Storage
 ======================
 
+Here, we're going to talk about the storage of a contract.

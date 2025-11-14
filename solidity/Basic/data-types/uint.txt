@@ -74,6 +74,25 @@ For simple example, we all know that binary code is exist between 0 and 1, Y/N.
             - No deadline of the transaction 
             - No timestamp of token expiration, lock, vesting, cooldown, staking duration
             - Nodes may not be synchronized and inconsistent
+    
+    3. ID / Index
+        uint is also used in ID and Index.
+        Things like:
+            - ID of an NFT (tokenID)
+            - ID of an item (itemID)
+            - ID of a user (userID)
+            - Index of an array (arrayIndex)
+        Why?
+        Because the ID of all those stuffs must not written as a negative number.
+    
+    4. Counting
+        uint is also used for counting.
+        Things like:
+            - Number of votes (voteCount)
+            - Number of tokens (tokenCount)
+            - Number of protocol users (numberOfUsers)
+            - Number of transactions (transactionCount)
+
             
 
             

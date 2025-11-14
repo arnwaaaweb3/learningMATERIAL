@@ -54,6 +54,7 @@ Q: How does EVM work?
                    sstore (write to storage) --> expensive gas fees
                    kkecak256 --> kinda expensive
                    etc.
+          For more information, please refer to EVM.txt
 
 Q: In Solidity, what is the difference between a storage and a memory?
      A: Storage is permanent while memory is temporary.
@@ -62,6 +63,7 @@ Q: In Solidity, what is the difference between a storage and a memory?
           This is the one that goes into the blockchain after the transaction is completed.
                For example:
                string public name; // STORAGE
+          For more information, please refer to the storage folder. 
 
 ==================================================================================================
 # Basic Notes
