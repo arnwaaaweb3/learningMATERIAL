@@ -1,6 +1,7 @@
 ===========================
 # EVM (Ethereum Virtual Machine)
 ===========================
+# In this note, we will explore all about EVM and its usecases.
 
 Let's talk about the EVM
     To make it simple, EVM is a virtual computer machine that executes the Ethereum's smart contract.
@@ -42,11 +43,20 @@ How does EVM work? (Step-by-step)
                             We use 'data' to explain what function we want to execute to EVM as a bytecode.
                                 For example:
                                 data = 0xa9059cbb000000000000000000000000BEEF...00000000000000000000000000000000056BC75E2D63100000
-                                                this means that we want to execute 'transfer(address,uint256)' function 
+                                                this means that we want to execute 'transfer(address,uint256)' function
+                                Formula: data = function selector + encoded parameters
+                                Solidity compiler will always have the same format of data, which means:
+                                    0xa9059cbb = transfer(address,uint256)
+                                
+
                     - gas: the gas fees to be paid
                     - gasPrice: the price of gas fees
                     - gasLimit: the maximum amount of gas to be used
                     - nonce: the number of transactions sent by the sender
+                    - chainId: the chain ID of the network
+                    - value: the amount of ETH to be sent
+                            value is the amount of money (ETH) to be sent to the receiver.
+                            this used if you want to transfer some ETH to the receiver, or if you want to pay a  smart contract some ETH to do something.
                         Example:
                         {
                             nonce: 12,
@@ -56,4 +66,8 @@ How does EVM work? (Step-by-step)
                             value: 1 ETH,
                             data: 0x... (abi encoded)
                         }
-             EVM reads
+        2.Signing & Broadcasting
+            Once the transaction object is created, Here's what gonna happen:         
+            - Signing: 
+                Your wallet (Metamask/Rabby) uses your Private Key to sign this transaction. 
+                This proves that YOU (the owner of the address) authorized this specific action.             - Broadcasting: The signed transaction is sent to the "Mempool" (Memory Pool). Think of this as a waiting room for pending transactions.             - Validation: A Validator (or Miner) picks your transaction from the Mempool, verifies the signature, and includes it in the next Block.

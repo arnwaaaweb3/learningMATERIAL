@@ -3,6 +3,7 @@
 # uint
 uint = unsigned integer
 ==================
+# In this note, we will explore all about uint and its usecases.
 
 - uint is: 
     a data type that can store value only between 0 and 2^256 - 1.
@@ -43,6 +44,10 @@ For simple example, we all know that binary code is exist between 0 and 1, Y/N.
     2.There's a lot of cryptography operations that works heavily reliant on 256 bits.
         Things like Hashing, Elliptic Curve Cryptography, and so on.
     3. For security, 256 bits won't having an overflow issue.
+        Speaking techincally, it's still does possibkle to be overflow, but it's must be happened because of error / mistake in programming the contract.
+        But to imagine the size, 256 bits is super large and practically hard to reach.
+        The main key is just for developers to not make an arithmetic operations pass over the limits.
+        And also, to mention that compiler version should be higher than O.8.x version (the one who's auto revert overflow)
         Overflow is like when you want to add another value to the storage, but the storage itself doesn't had a space left for the new value.
         The range of 256 bits is super large!
     4. A lot of Ethereum's component are using hashing based on 256 bits, so it's also for consistency
@@ -54,18 +59,19 @@ For simple example, we all know that binary code is exist between 0 and 1, Y/N.
             - balance of an account (balance)
             - amount of tokens in an account (amount)
             - total supply of a token (totalSupply)
-                Why?
+                Why? 
                Security:  The balance of an account or the amount of tokens must stay non-negative (>= 0)
                Standard: Majority of token standards like ERC-20 defines the balance, amount, and totalSupply as uint256
     
     2. Timestamp
         uint is also used in timestamp.
+        shortly, there's no negative number in timestamp.
         timestamp in blockchain is a representation of the time in seconds since the epoch.
             In computer world, we have what we called as "Unix Epoch".
             Unix Epoch is the time in seconds since January 1, 1970, 00:00:00 UTC
                 Why 1970?
                 Because it's the year that the Unix was created.
-                And that time, engineers and computer scientists needed to create a standard time.
+                Unix Time was began from epoch 1970 convention.              And that time, engineers and computer scientists needed to create a standard time.
             Now, why blockchain also use this same timestamp?
             Because blockchain were made by modern computers, and modern computers are using Unix Epoch as their standard time.
             What happened if blockchain didn't have its own standard time?
@@ -77,6 +83,7 @@ For simple example, we all know that binary code is exist between 0 and 1, Y/N.
     
     3. ID / Index
         uint is also used in ID and Index.
+        You would never see a negative number in ID or Index either.
         Things like:
             - ID of an NFT (tokenID)
             - ID of an item (itemID)

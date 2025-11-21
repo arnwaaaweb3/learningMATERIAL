@@ -1,3 +1,7 @@
+#Official Documentation
+
+# In this note, we will try to understand the official documentation about Solidity.
+
 ==================================================================================================
 How to write a smart contract in Solidity:
 1. Define the license of the smart contract repository.

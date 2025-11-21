@@ -1,0 +1,48 @@
+
+========================
+Hello, dear Warrior!
+========================
+
+Welcome to the world of Solidity!
+This is my notes for you to learn about Solidity.
+And here, i'm documenting every tiniest concepts about Solidity.
+
+--------------------------------------------------
+P.S Oh yeah, your brain is going to mushed just like mine (lol :D)
+--------------------------------------------------
+
+Don't worry, Here i'm going to explain everything in detail.
+And i do hope it's not scarier than i think! 
+Because by the time i'm writing this note, i'm also a normie in Solidity.
+
+---------------------------------------------------
+
+What you need to have before you start learning this Solidity:
+    1. A Curious Mind: 
+        Always be hungry and ask everything, even the things that you think you already understand.
+        Don't act like you know something, because it will blur your learning process.
+    2. Grit and Endurance:
+        I'm not coming from a Computer Science background, so learning this is feels impossible for me.
+        If you're in the same shoes as i am, don't worry! You can do it!
+        What you need to promise me is, you need to have a grit and endurance.
+        Some learning concepts may sounds too sophisticated for your brain to take into.
+        But, don't give up. 
+        Just take your time to understand things, even if it's slowly like a snail steps.
+        And please don't forget to have fun too with your real life.
+        You deserve to learn and having fun too.
+    3. Patience:
+        Learning is a process and it takes time.
+        Don't expect to be an expert in just six months or a year.
+        The field is very wide more than you think.
+        So, patience is the key.
+    4. Consistency:
+        Learning, especially Solidity for me is a commitment.
+        Like a marriage, i'm committed to learn this everyday, even if just a little for a day.
+        So, you should be too.
+        I hope i didn't expect myself to not finishing what i'm starting right now.
+        Consistency is the key, and you can't rush greatness.
+
+---------------------------------------------------
+That's all!
+Have fun,
+Nawa.

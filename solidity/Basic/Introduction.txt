@@ -1,4 +1,6 @@
+# Introduction
 
+# In this note, we will say hi to basic concecpts of Solidity and Blockchain
 ==================================================================================================
 # Basic Questions
 
