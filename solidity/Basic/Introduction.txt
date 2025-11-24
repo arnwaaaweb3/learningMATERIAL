@@ -32,7 +32,7 @@ Q: How does the record-sharing (distribution) process work?
           Once the new block is accepted by the consensus rules, it is shared with all other computers, and they all add a copy to their own ledger, keeping everything synchronized.
 
 Q: What is Solidity?
-     A: Solidity is the programming language used to write Smart Contracts. 
+     A: Solidity is the programming language used to write Smart Contract for Ethereum.
           It defines the rules and logic for how an agreement works, and then executes the code automatically when the terms are met, all without needing a third-party lawyer or banker.
 
 Q: Is Solidity only for Ethereum?
