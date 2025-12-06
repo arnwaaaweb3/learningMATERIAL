@@ -1,0 +1,33 @@
+================================
+Code
+================================
+
+// SPDX-License-Identifier: GPL-3.0
+pragma solidity ^0.8.0;
+
+contract SimpleStorage {
+    // 1. Variabel 'data' disimpan di dalam storage (persistent)
+    uint256 public data; 
+
+    // 2. Fungsi untuk menyimpan data (mengubah state/status contract)
+    function set(uint256 _data) public {
+        data = _data;
+    }
+
+    // 3. Fungsi untuk mengambil data (hanya melihat state, tidak mengubah)
+    // view: tidak menghabiskan gas (hanya membaca data di blockchain)
+    function get() public view returns (uint256) {
+        return data;
+    }
+}
+
+===============================
+Error Log (Explained)
+===============================
+[{
+	"message": "Source file requires different compiler version (current compiler is 0.4.17+commit.bdeb9e52.Emscripten.clang - note that nightly builds are considered to be strictly less than the released version",
+	"explanation": 
+},{
+	"message": "no-trailing-whitespace: Line contains trailing whitespace",
+	"explanation": 
+}]

@@ -41,7 +41,7 @@ What exactly compiler does?
 - Compiler does not giving a direct instruction into blockchain.
     It's just generates things that EVM understands.
     From human-readable code (items) to machine-understandable items.
-    Beside bytecode and ABI, there's also a lot of other thing as the output, like:
+    Beside ABI, there's also a lot of other thing as the output, like:
         - Metadata.JSON
         - Opcodes
         - Gas Estimation
