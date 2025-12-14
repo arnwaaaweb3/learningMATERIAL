@@ -1,5 +1,4 @@
 # EVM (Ethereum Virtual Machine)
-===========================
 
 ## In this note, we will explore all about EVM and its usecases.
 

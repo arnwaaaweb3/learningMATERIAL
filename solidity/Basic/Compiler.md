@@ -23,7 +23,6 @@ It's important because:
 
   ```solidity
   pragma solidity ^0.8.20;
-        =====================
 
 This is basically telling the compiler to compile your smart contract using the higher version from `0.8.20`, but lower than `0.9.0`.
 
@@ -34,7 +33,7 @@ What exactly compiler does?
   - C. Optimization
   - D. Code Generation
 
-==================================================================================================
+============================================================================================
 # Side-Note
 
 - Compiler does not giving a direct instruction into blockchain.

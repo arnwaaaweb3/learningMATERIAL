@@ -1,8 +1,7 @@
 # 🚀 ABI Note - Solidity Application Binary Interface
-====================
 
 ## In this note, we will talk about Solidity ABI
-==================================================================================================
+============================================================================================
 
 ### What is Solidity ABI?
 
@@ -46,6 +45,7 @@ In short:
 ### How does Solidity ABI looks like?
 
 It will look like this, a JSON file with a lot of functions and information:
+
 ```json
 [
     {
@@ -61,6 +61,7 @@ It will look like this, a JSON file with a lot of functions and information:
         "type": "function"
     }
 ]
+```
 
 # What if My dApp and its smart contract didn't use ABI as in Solidity ABI?
 
