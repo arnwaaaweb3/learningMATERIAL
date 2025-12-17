@@ -79,14 +79,14 @@ I also used "public" as the visibility-specifier.
 With "Public", other smart contract, frontends, ether.js, can easily call this variable like this:  
 
 ```text
-contract.balance
+contract.data
 ```
 
 i also make the variable named as "data". This is not a fixed glossarium on Solidity.  
 It's a variable name, so feel free to use a descriptive name to describe your variable.  
-and this variable, is what i called as "main-state variable" or "contract-level variable).  
+and this variable, is what i called as "state variable" or "contract-level variable.  
 Think of it like the main tunnel from all what's happening inside your smart contract.  
-In other words, yes! There'll be a local-state variable too.  
+In other words, yes! There'll be a local variable too.  
 
 Other tips:
     
@@ -115,29 +115,32 @@ Other tips:
 - **function set(uint256 _data) public { data = _data; }**  
 
 Here, you can use a word "function" each time you want to describe what's your contract abilities. (It's a preserved word that exist in Solidity)  
-And here, i used a set() to change the main-state variable input into a local-state variable parameter.  
+And here, i used a set() to change the state variable input into a local variable / parameter.  
 It's changeable! You can use other words, as long it's not a preserved word from Solidity.  
 
-Earlier the definition that i stated, i already named "data" as my main-state variable / contract-level variable.  
-_(ref= **uint256 public data;**)_.  
-However, here i also write a different variable, a local-state variable (1 level down from the smart contract variable).  
+Earlier the definition that i stated, i already named "data" as my state variable / contract-level variable.  
+_(ref= **uint256 public data;**)._  
+However, here i also write a different variable, a local variable (1 level down from the smart contract variable).  
 and it's named "_data".  
 
-So, this mean that i want to describe a function (**set()**), that could change the main-state variable value (**data**), with a local-state variable value (**_data**), when this function is called.  
+So, this mean that i want to describe a function (**set()**), that could change the state variable value (**data**), with a local variable value (**_data**), when this function is called.  
 
 **Summary**
 ```text
-data        → main-state variable name (its name depends on Dev)  
-_data       → local-state variable name (its name depends on Dev too)  
+data        → state variable name (its name depends on Dev)  
+_data       → local variable name (its name depends on Dev too)  
 function    → A preserved word and a keyword to set a function to your smart contract (add ability).  
 set         → function name (its name also depends Dev)  
-(uint256 _data) → Parameter: (data-type + local-state variable name)  
+(uint256 _data) → Parameter: (data-type + local variable name)  
 public      → Visibility-specifier (It's a must have in each function / contract)  
 { data = _data; } → The function body / definition.  
 ```
+
 **Key Concept**
 ```text
 - State Variable (data): Permanent storage on blockchain, persists between function calls  
 - Local Parameter (_data): Temporary, exists only during function execution  
 - The function set() changes the blockchain state (requires gas fee when called)  
 ```
+
+- **function get() public view returns (uint256) {**
