@@ -40,16 +40,6 @@ Maybe one day I’ll pursue a formal education, but for now? AI + self-paced lea
 
 ---
 
-## 🗂️ What’s Inside
-
-| File            | Description                                                                 |
-|-----------------|-----------------------------------------------------------------------------|
-| `print.py`      | Learn how to use `print()`, quotation marks, and basic string operations.   |
-| `robocafe.py`   | A fun mini-project based on @NetworkChuck’s Python basics. Covers `input()`, `\n`, and variables. |
-| `datatypes.py`  | Get to know Python’s data types: `int`, `float`, `str`, and how they work.  |
-
----
-
 ## 🧠 Final Words
 
 This is not just code. This is a declaration:  

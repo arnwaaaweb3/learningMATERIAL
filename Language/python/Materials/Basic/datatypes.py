@@ -1,12 +1,14 @@
 #A number in Python is called an integer if it is a whole number, meaning it does not have a decimal point.
 
 #Defining variable here
-name = "Nolan"
-age = 21
-height = 164.57
-weight = 56.70
-pet = ["cat", "fish", "bird"]
-
+name = "Nolan" #string
+age = 21 #integer
+height = 164.57 #float
+weight = 56.70 #float
+pet = ["cat", "fish", "bird"] #list
+# For more explanation about the data types, please check the Glossarium Folder!:
+# 1. Integer.md
+# 2. String.md
 
 print(f"{name} is {age} years old.")
 print(f"{name} is {height} cm tall.")
