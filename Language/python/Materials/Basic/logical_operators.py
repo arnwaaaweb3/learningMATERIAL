@@ -64,7 +64,7 @@ if not name2 == "Brandon": #the code will be executed if the name2 variable isn'
         print("This should be Marlina's story.\n") #Reminder for the user.
 
 #Filtering by the minimum and maximum age here:
-if age2 < maximum_age2 or age2 > minimum_age2: #since we used "or", the code will be executed if one of the rules are met.
+if age2 >= minimum_age2 and age2 <= maximum_age2: #since we used "and", the code will be executed if both rules are met.
     print(f"{name2} is still eligible to work at {workplace2} as a {occupation2}.\n") #This is a statement that Marlina met the rules to work in K-9 Mart.
 else: #this is if the age2 variable is more than 45, or less than 20, then he/she is not eligible to work in K-9 Mart.
     print(f"{name2} is not eligible to work at {workplace2} as a {occupation2} anymore.\n")
@@ -98,4 +98,4 @@ else:
 #so the logic of "!=" is like this:
 #if the value of the variable is not the same as the value we want, then the code will be executed, else the code will be skipped.
 #if the value of favorite_football_team is Real Madrid, then the code will be ignored, and the else statement will be executed.
-#it's like the inverse of "==" operator! h
+#it's like the inverse of "==" operator! 
