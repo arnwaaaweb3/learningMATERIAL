@@ -23,7 +23,7 @@ contract SimpleStorage {
 
 This is the SPDX-License-Identifier.  
 It basically tells what your smart contract is licensed under  
-Check out at SPDX.md for more explaanation.  
+Check out at SPDX.md for more explanation.  
 
 ---
 - **pragma solidity ^0.8.0;**
@@ -31,7 +31,7 @@ Check out at SPDX.md for more explaanation.
 This is the compiler version that you need to compile this smart-contract.  
 Here, ^0.8.0 means that:
 **compile with 0.8.x, but not with 0.9.0 version.**  
-As a Smart Contract Dev, you may throw some "feature" that only complies with specific version of compiler.  
+As a Smart Contract Dev, you may throw some "feature" that only compiles with specific version of compiler.  
 Therefore, it's also important for you to know what's the update patch between each solidity compiler version.  
 So that you won't configure a mismatch version of what compiler you need and your smart contract written pragma.  
 
@@ -52,7 +52,7 @@ Check out at Compiler.md for more explanation.
 - **contract SimpleStorage {**
 
 Here, I use word "contract" to define my smart contract.  
-I name it "SimpleStorage". This is just a simple variable.  
+I name it "SimpleStorage". This is the name of the smart contract.  
 Technically, you can use any name. But remember! Code readibility is number one!  
 So, make sure you use a specific name that could explain it's function.  
 
@@ -79,13 +79,14 @@ I also used "public" as the visibility-specifier.
 With "Public", other smart contract, frontends, ether.js, can easily call this variable like this:  
 
 ```text
-contract.data
+contract.data()
 ```
 
 i also make the variable named as "data". This is not a fixed glossarium on Solidity.  
 It's a variable name, so feel free to use a descriptive name to describe your variable.  
 and this variable, is what i called as "state variable" or "contract-level variable.  
 Think of it like the main tunnel from all what's happening inside your smart contract.  
+State variables are stored on-chain and persist across transactions.
 In other words, yes! There'll be a local variable too.  
 
 Other tips:
@@ -103,7 +104,7 @@ Other tips:
     
     (example: Name like:  
     1. userBalance = to define numeric data of User Balance's value.  
-    2. userAdress = to define a string of User Address.  
+    2. userAddress = to define a string of User Address.  
     3. totalSupply = to define a total supply of X, that could be redefined later.  
     etc...)  
 
@@ -115,7 +116,7 @@ Other tips:
 - **function set(uint256 _data) public { data = _data; }**  
 
 Here, you can use a word "function" each time you want to describe what's your contract abilities. (It's a preserved word that exist in Solidity)  
-And here, i used a set() to change the state variable input into a local variable / parameter.  
+And here, i used a set() takes a local parameter and assigns its value to the state variable.  
 It's changeable! You can use other words, as long it's not a preserved word from Solidity.  
 
 Earlier the definition that i stated, i already named "data" as my state variable / contract-level variable.  
@@ -141,6 +142,18 @@ public      → Visibility-specifier (It's a must have in each function / contra
 - State Variable (data): Permanent storage on blockchain, persists between function calls  
 - Local Parameter (_data): Temporary, exists only during function execution  
 - The function set() changes the blockchain state (requires gas fee when called)  
+- Visibility-specifier: It's a must have in each function / contract, which contains option like:
+1. public,
+2. private,
+3. internal,
+4. external.
 ```
 
-- **function get() public view returns (uint256) {**
+-**function get() public view returns (uint256) { return data; }**
+
+Here, again.. I describe another function (**get()**), that could return the state variable value (**data**), when this function is called.
+Using public means this function can be called from outside the contract.
+And then, using view, means that the function is read-only, and it's not allowed to change the state variable value.
+And when this function is called, I want the output to be uint256, and take the value of the state variable "data", from the storage.
+
+**Note:** Since data is declared as public, Solidity automatically generates a getter function. Therefore, the get() function is technically redundant.
