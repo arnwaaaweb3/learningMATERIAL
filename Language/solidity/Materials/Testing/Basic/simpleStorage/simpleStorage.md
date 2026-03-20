@@ -104,7 +104,8 @@ Other tips:
     
     (example: Name like:  
     1. userBalance = to define numeric data of User Balance's value.  
-    2. userAddress = to define a string of User Address.  
+    2. userAddress = to define user Address's value. 
+    [Note: In Solidity, Address should be using 'address' type, not a string. Because when you use string, it going to be costing us a lot of gas, and it's not recommended to use it.]
     3. totalSupply = to define a total supply of X, that could be redefined later.  
     etc...)  
 

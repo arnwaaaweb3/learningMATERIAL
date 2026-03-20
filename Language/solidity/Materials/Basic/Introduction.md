@@ -61,7 +61,7 @@ A: EVM performs these three essential functions:
      - `SSTORE` (write to storage) → expensive gas fees  
      - `KECCAK256` → moderately expensive  
 
-For more details, refer to `EVM.txt`.
+For more details, refer to `EVM.md`.
 
 **Q: In Solidity, what is the difference between storage and memory?**  
 A:  
