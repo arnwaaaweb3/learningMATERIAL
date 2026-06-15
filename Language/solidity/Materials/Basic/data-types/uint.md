@@ -8,15 +8,24 @@ uint = unsigned integer
 - uint is: 
     a data type that can store value only between 0 and 2^256 - 1.
     this means that uint can't store a negative value, like a minus number.
+    - **Speciality:** No negative number.
 
-- uint, unsigned here, means that the value (every bit in the uint) only served to store the value
-    not to represent the value itself as positive or negative.
+- uint, unsigned here, means that the value (every bit in the uint) only served to store the value.
+    - **Usecase:** Store a value in a contract, like a balance in a contract (with no minus).
+
+- uint are not to represent the value itself as positive or negative.
+
     To be clear, imagine that uint as a balance in a bank account. It's only show you how much money you have.
-    But, balance itself can't be negative, right?
+
+    But, **balance itself can't be negative**, right?
     So, the balance is unsigned, cannot represent the value of transaction itself.
+
     Which, in transaction itself, we need a positive value (add) and a negative value (subtract).
 
+---
+
 -  Now, the maximum value of uint is 2^256 - 1, which is the maximum value that can be stored in a uint.
+
     You may wonder, why 2^256-1?
 
 - the formula of uint is:
@@ -31,16 +40,15 @@ For simple example, we all know that binary code is exist between 0 and 1, Y/N.
             2. 001                        6. 101
             3. 010                        7. 110
             4. 011                        8. 111
-        for the smallest value, it's clearly 000
-        but for the positive value, there's only 7 combination:
-            001, 010, 011, 100, 101, 110, 111
-        this is happened, because we (or computers) started count the combination from 0, so:
-            uintX=2^X-1
 
 - But, still! it doesn't answer the question of why 256? That seems an odd number, right?
     There's many reasons of why 256 is chosen.
     1. EVM was designed to work with word-size of 256 bits, so it's the default.
         This means that EVM "thinks" in 256 bits of block.
+        Simple analogy:
+            - In a 64-bit computer (like your laptop), the CPU "gulps" 64 bits of data at a time.
+            - In the EVM, the "gulp" size is 256 bits.
+            - This is why using uint8 or uint16 instead of uint256 can actually cost more gas in some cases. The EVM has to do extra work to "mask" the other bits to make the number small.
     2.There's a lot of cryptography operations that works heavily reliant on 256 bits.
         Things like Hashing, Elliptic Curve Cryptography, and so on.
     3. For security, 256 bits won't having an overflow issue.
